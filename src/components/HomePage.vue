@@ -38,7 +38,6 @@ export default {
             'Content-Type': 'application/json'
           }
         })
-        console.log(res)
         if (!res.ok) {
           throw new Error('似乎有些不對勁！')
         }
@@ -47,7 +46,7 @@ export default {
         this.loadingNow = false
       } catch (err) {
         this.loadingNow = false
-        this.errorAlert(err)
+        this.errorAlert(String(err))
       }
     },
     changePhoto() {
