@@ -47,7 +47,7 @@ export default {
         this.loadingNow = false
       } catch (err) {
         this.loadingNow = false
-        this.errorAlert(err)
+        this.errorAlert(err.message)
       }
     },
     changePhoto() {
