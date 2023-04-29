@@ -38,6 +38,7 @@ export default {
             'Content-Type': 'application/json'
           }
         })
+        console.log(res)
         if (!res.ok) {
           throw new Error('似乎有些不對勁！')
         }
