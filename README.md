@@ -1,35 +1,20 @@
-# vite-week2-sweet-loading
+# Vue-使用第三方套件練習
 
-This template should help get you started developing with Vue 3 in Vite.
+### 說明
 
-## Recommended IDE Setup
+- 練習使用 NPM 安裝以下套件到 Vue 裡面使用
+- [Vue Loading Overlay Component](https://www.npmjs.com/package/vue3-loading-overlay)
+- [vue-sweetalert2](https://github.com/avil13/vue-sweetalert2)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### 功能
 
-## Customize configuration
+- 串接 Unsplash API，隨機取得圖片
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### 本次練習
 
-## Project Setup
+- 使用 Github Action 自動部署
+- 隱藏機密環境變數
 
-```sh
-npm install
-```
+### Demo
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- [Github Pages](https://woowooyong.github.io/Vue-week2-Loading-Alert/)
