@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VITE_ACCESS_KEY: ${{ secrets.VITE_ACCESS_KEY }}
+      VITE_API_URL: ${{ secrets.VITE_ACCESS_KEY }}
 
     steps:
       - name: Checkout repo

@@ -15,8 +15,8 @@
 
 <script>
 import LoadingSpinner from './LoadingSpinner.vue'
-import apiUrl from '../api'
-const { VITE_ACCESS_KEY } = import.meta.env
+// import apiUrl from '../api'
+const { VITE_ACCESS_KEY, VITE_API_URL } = import.meta.env
 
 export default {
   components: { LoadingSpinner },
@@ -30,7 +30,7 @@ export default {
     async getRandomPhoto() {
       this.loadingNow = true
       try {
-        const res = await fetch(apiUrl, {
+        const res = await fetch(VITE_API_URL, {
           method: 'GET',
           headers: {
             Authorization: `Client-ID ${VITE_ACCESS_KEY}`,
