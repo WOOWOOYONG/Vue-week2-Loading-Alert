@@ -1,9 +1,9 @@
 <script setup>
-import HomePage from '../components/HomePage.vue'
+import RandomImage from '../components/RandomImage.vue'
 </script>
 
 <template>
   <main>
-    <HomePage />
+    <RandomImage />
   </main>
 </template>

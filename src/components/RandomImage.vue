@@ -15,26 +15,24 @@
 
 <script>
 import LoadingSpinner from './LoadingSpinner.vue'
-const { VITE_ACCESS_KEY } = import.meta.env
+const { VITE_ACCESS_KEY, VITE_API_URL } = import.meta.env
 
 export default {
   components: { LoadingSpinner },
   data() {
     return {
-      url: 'https://api.unsplash.com/photos/random',
-      key: VITE_ACCESS_KEY,
       photoUrl: '',
-      loadingNow: true
+      loadingNow: false
     }
   },
   methods: {
     async getRandomPhoto() {
       this.loadingNow = true
       try {
-        const res = await fetch(this.url, {
+        const res = await fetch(VITE_API_URL, {
           method: 'GET',
           headers: {
-            Authorization: `Client-ID ${this.key}`,
+            Authorization: `Client-ID ${VITE_ACCESS_KEY}`,
             'Content-Type': 'application/json'
           }
         })
@@ -43,10 +41,10 @@ export default {
         }
         const data = await res.json()
         this.photoUrl = data.urls.regular
-        this.loadingNow = false
       } catch (err) {
-        this.loadingNow = false
         this.errorAlert(String(err))
+      } finally {
+        this.loadingNow = false
       }
     },
     changePhoto() {

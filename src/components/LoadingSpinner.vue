@@ -1,12 +1,12 @@
 <template>
   <div class="vld-parent">
-    <loading
+    <Loading
       :active="isLoading"
       :can-cancel="false"
       :color="viewmodel.color"
       :loader="viewmodel.loader"
       :width="viewmodel.width"
-    ></loading>
+    ></Loading>
   </div>
 </template>
 
