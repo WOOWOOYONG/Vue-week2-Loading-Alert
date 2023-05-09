@@ -15,7 +15,6 @@
 
 <script>
 import LoadingSpinner from './LoadingSpinner.vue'
-// import apiUrl from '../api'
 const { VITE_ACCESS_KEY, VITE_API_URL } = import.meta.env
 
 export default {
