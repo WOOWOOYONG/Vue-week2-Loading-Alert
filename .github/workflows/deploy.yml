@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       VITE_ACCESS_KEY: ${{ secrets.VITE_ACCESS_KEY }}
-      VITE_API_URL: ${{ secrets.VITE_API_URL }}
+      VITE_API_URL: https://api.unsplash.com/photos/random
 
     steps:
       - name: Checkout repo
