@@ -2,7 +2,7 @@
   <h1>每小時只能取得50張圖片...手下留情！</h1>
   <div class="wrapper" v-if="!loadingNow">
     <div>
-      <img :src="photoUrl" alt="photo" />
+      <img :src="photoUrl" alt="photo" v-if="photoUrl" />
       <div class="btnWrapper">
         <button type="button" class="btn" @click="changePhoto">換一張</button>
         <button type="button" class="btn" @click="copyPhotoUrl">複製圖片位址</button>
@@ -90,9 +90,7 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.getRandomPhoto()
-    }, 500)
+    this.getRandomPhoto()
   }
 }
 </script>
